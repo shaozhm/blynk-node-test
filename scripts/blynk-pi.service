@@ -1,0 +1,17 @@
+[Unit]
+Description=Blynk Client/PowerOff - after 20 minutes
+Requires=systemd-time-wait-sync.service
+After=systemd-time-wait-sync.service
+Wants=time-sync.target
+After=network.target network-online.target time-sync.target
+
+[Service]
+Environment=NODE_HOME=/home/pi/node-v18.13.0-linux-armv7l
+Environment=NODE_PATH=/home/pi/node-v18.13.0-linux-armv7l/lib/node_modules
+ExecStart=/home/pi/node-v18.13.0-linux-armv7l/bin/node /home/pi/blynk-pi
+Restart=on-failure
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

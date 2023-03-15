@@ -1,0 +1,18 @@
+[Unit]
+Description=Call Blynk to switch off
+Requires=avahi-daemon.service
+After=avahi-daemon.service
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+##Environment=SONOSPI_TOKEN=
+##Environment=IDLE_VPIN=
+##Environment=SWITCH_VPIN=
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/true
+ExecStop=/home/pi/blynk-shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
