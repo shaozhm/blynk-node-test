@@ -1,6 +1,6 @@
 controller:
-  - name: sonospi
-    address: sonospi.local
+  - name: sonos
+    address: sonos.local
     port: 8442
     token: BO9Ej28AzpoEsaCs0WXiS3mqSO2KE8mZ
     global-switch-button-pin: 1
