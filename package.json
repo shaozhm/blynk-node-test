@@ -23,12 +23,10 @@
   "dependencies": {
     "blynk-library": "0.5.4",
     "moment": "2.29.4",
-    "lodash": "4.17.21",
     "yargs": "13.2",
     "verror": "1.10.1",
     "dotenv": "8.0",
     "uuid": "8.3.2",
-    "request": "2.88.2",
-    "yaml": "2.2.1"
+    "request": "2.88.2"
   }
 }

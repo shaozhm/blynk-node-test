@@ -6,32 +6,33 @@ const { main } = require('../src/blynk-pi');
 dotenv.config();
 
 const options = yargs
-  .usage('Usage: [-i] [-c] [-ipin] [-spin]')
-  .option('i', {
-    alias: 'info',
-    describe: 'information about this node',
-    type: 'boolean',
-    demandOption: false,
-  })
-  .option('c', {
-    alias: 'controller',
-    describe: 'information about the controller',
-    type: 'boolean',
-    default: false,
-    demandOption: false,
-  })
-  .option('s', {
-    alias: 'search',
-    describe: 'return the value of the property in this node',
+  .usage('Usage: [-t] [-n] [-a] [-p]')
+  .option('t', {
+    alias: 'token',
+    describe: 'device token',
     type: 'string',
-    default: false,
+    default: 'IoDSCSWHYGkFp5s0WLthcqXkvzzdFiXh',
+    demandOption: true,
+  })
+  .option('n', {
+    alias: 'pin',
+    describe: 'virtual pin number',
+    type: 'number',
+    default: 7,
+    demandOption: true,
+  })
+  .option('a', {
+    alias: 'address',
+    describe: 'blynk server address',
+    type: 'string',
+    default: 'localhost',
     demandOption: false,
   })
-  .option('g', {
-    alias: 'get',
-    describe: 'return the value of the property in the controller',
-    type: 'string',
-    default: false,
+  .option('p', {
+    alias: 'port',
+    describe: 'blynk server port',
+    type: 'number',
+    default: 8080,
     demandOption: false,
   })
   .argv;
