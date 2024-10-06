@@ -6,20 +6,21 @@ const main = (options) => {
     pin: testVPIN,
     address,
     port,
+    status,
   } = options;
   const blynk = new Blynk.Blynk(piToken, options = {
     connector : new Blynk.TcpClient( options = { addr: address, port: port })
   });
   blynk.on('connect', () => {
     console.log('Welcome Test Node');
-  });
-  const testPin = new blynk.VirtualPin(testVPIN);    
-  testPin.on('write', (param) => {
-    const input = parseInt(param[0]);
-    console.log(`switchPin write to ${input}`);
-  });
-  testPin.on('read', () => {
-    testPin.write(1);
+    const bridge = new blynk.WidgetBridge(99);
+    bridge.setAuthToken(piToken);
+    if (status === 'on') {
+      bridge.virtualWrite(testVPIN, 1);
+    } else {
+      bridge.virtualWrite(testVPIN, 0);
+    }
+    console.log(`switchPin switch ${status}`);
   });
 };
 
