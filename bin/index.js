@@ -1,40 +1,16 @@
+#!/usr/bin/env node
+const chalk = require('chalk');
 const dotenv = require('dotenv');
 const yargs = require('yargs');
-const { main } = require('../src/blynk-pi');
+const { hideBin } = require('yargs/helpers');
+
 
 // read in settings
-dotenv.config();
+dotenv.config({ override: true });
 
-const options = yargs
-  .usage('Usage: [-t] [-n] [-a] [-p]')
-  .option('t', {
-    alias: 'token',
-    describe: 'device token',
-    type: 'string',
-    default: 'IoDSCSWHYGkFp5s0WLthcqXkvzzdFiXh',
-    demandOption: true,
-  })
-  .option('n', {
-    alias: 'pin',
-    describe: 'virtual pin number',
-    type: 'number',
-    default: 7,
-    demandOption: true,
-  })
-  .option('a', {
-    alias: 'address',
-    describe: 'blynk server address',
-    type: 'string',
-    default: 'localhost',
-    demandOption: false,
-  })
-  .option('p', {
-    alias: 'port',
-    describe: 'blynk server port',
-    type: 'number',
-    default: 8080,
-    demandOption: false,
-  })
-  .argv;
-
-main(options);
+yargs(hideBin(process.argv))
+  .usage(chalk.bold.cyan('Welcome to Blynk Tool.\n') + chalk.white('Usage: $0 <command> [options]'))
+  .commandDir('../src/cmds')
+  .demandCommand()
+  .help()
+  .argv
