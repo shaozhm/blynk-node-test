@@ -70,6 +70,22 @@ Welcome Test Node
 | 74          | switch-button-pin (s1r)   | write     | 1/0    | switch s1r on/off |
 | 75          | switch-button-pin (t1)    | write     | 1/0    | switch t1  on/off |
 
+
+### Virtual Pins - blynk-pi
+
+| Pin Number  | Pin Name                 | Operation | Values | Description |
+| :---------- | :----------------------- | :-------- | :----- | :---------- |
+| 3           | shutdown-virtual-pin     | write     | 0      | soft power switch: -> turn off |
+
+Example:
+
+### Virtual Pins - NodeMCU
+| Pin Number  | Pin Name                 | Operation | Values | Description |
+| :---------- | :----------------------- | :-------- | :----- | :---------- |
+| 3           | shutdown-virtual-pin     | write     | 1      | soft power switch: -> turn on |
+
+Example:
+
 Commands: 
 1. turn off `f1`
     * `blynk-send send -n 71 off`
@@ -102,24 +118,6 @@ Commands:
     * `blynk-send send -n 75 on`
     * `blynk-send send -t l-ENcwSVVQGsmfZyjD-XiwXS7yoUIKEg -n 3 on`
 
-
-### Virtual Pins - blynk-pi
-
-| Pin Number  | Pin Name                 | Operation | Values | Description |
-| :---------- | :----------------------- | :-------- | :----- | :---------- |
-| 3           | shutdown-virtual-pin     | write     | 0      | soft power switch: -> turn off |
-
-Example:
-
-### Virtual Pins - NodeMCU
-| Pin Number  | Pin Name                 | Operation | Values | Description |
-| :---------- | :----------------------- | :-------- | :----- | :---------- |
-| 3           | shutdown-virtual-pin     | write     | 1      | soft power switch: -> turn on |
-
-Example:
-
-testing using blynk-library (python scripts)
+Testing using blynk-library (python scripts)
 > cd blynk-library/scripts
-> python3 blynk_ctrl.py  -s localhost -p 8080 -t IoDSCSWHYGkFp5s0WLthcqXkvzzdFiXh -vw 7 1
-
 > python3 blynk_ctrl.py -s sonos.local -p 8442 -t BO9Ej28AzpoEsaCs0WXiS3mqSO2KE8mZ -vw 1 1
