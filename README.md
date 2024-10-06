@@ -71,10 +71,13 @@ Welcome Test Node
 | 75          | switch-button-pin (t1)    | write     | 1/0    | switch t1  on/off |
 
 Commands: 
-1. turn off `f1` -> `blynk-send send -n 71 off`
-            `blynk-send send -t LNCbSgxT5US_jRoRxEk3kUC2Vjtcs3JE -n 3 off`
-2. turn on  `f1` -> `blynk-send send -n 71 on`
-            `blynk-send send -t TWeLjKM2HPMbpThb9wc9Py0OwGHWKfII -n 3 on`
+1. turn off `f1`
+    * `blynk-send send -n 71 off`
+    * `blynk-send send -t LNCbSgxT5US_jRoRxEk3kUC2Vjtcs3JE -n 3 off`
+2. turn on  `f1`
+    * `blynk-send send -n 71 on`
+    * `blynk-send send -t TWeLjKM2HPMbpThb9wc9Py0OwGHWKfII -n 3 on`
+
 
 ### Virtual Pins - blynk-pi
 
