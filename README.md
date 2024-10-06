@@ -90,8 +90,8 @@ Example:
 | :------------ | :----------------------- | :-------- | :------- | :---------- |
 | D-8           | relay-5V                 | write     | 1/0      | raspberry pi's power  |
 | D-1           | relay-14.85V             | write     | 1/0      | spealer's power       |
-| D-7           | raspberry-14.85V         | write     | 1/0      | (blue) connect from raspberry pi's GPIO25   |
-| D-6           | raspberry-5V             | write     | 1/0      | (yellow) connect from raspberry pi's GPIO24 |
+| D-7           | raspberry-14.85V         | write     | 1/0      | (blue) connect from raspberry pi's GPIO25 - control by hardware  |
+| D-6           | raspberry-5V             | write     | 1/0      | (yellow) connect from raspberry pi's GPIO24 - control by hardware |
 
 Example:
 
