@@ -8,6 +8,7 @@
 > blynk-send
 ```text
 > blynk-send --help
+Welcome to Blynk Tool.
 Usage: blynk-send <command> [options]
 
 Commands:
