@@ -1,5 +1,5 @@
 {
-  "name": "blynk-pi",
+  "name": "blynk-send",
   "version": "1.0.0",
   "main": "bin/index.js",
   "bin": {
