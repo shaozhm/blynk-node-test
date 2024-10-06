@@ -4,10 +4,24 @@
 
 2. start test node
 > npm install
-> node . --help
+> npm link
+> blynk-send
 ```text
-> node . --help
-Usage: [-t] [-n] [-a] [-p]
+> blynk-send --help
+Usage: blynk-send <command> [options]
+
+Commands:
+  blynk-send send <status>  Usage: send [-t] [-n] [-s] [-p] <status>
+
+Options:
+  --version  Show version number                                       [boolean]
+  --help     Show help                                                 [boolean]
+
+> blynk-send send --help
+Usage: send [-t] [-n] [-s] [-p] <status>
+
+Positionals:
+  status  on/off                      [string] [required] [choices: "on", "off"]
 
 Options:
   --help         Show help                                             [boolean]
