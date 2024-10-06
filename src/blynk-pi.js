@@ -21,6 +21,9 @@ const main = (options) => {
       bridge.virtualWrite(testVPIN, 0);
     }
     console.log(`switchPin switch ${status}`);
+    blynk.emit('end');
+    blynk.disconnect();
+    process.exit();
   });
 };
 
