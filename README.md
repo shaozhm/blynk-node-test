@@ -61,28 +61,37 @@ Welcome Test Node
 
 ### Virtual Pins - blynk-sonospi
 
-| Pin Number  | Pin Name                  | Operation | Values | Description       |
-| :---------- | :-----------------------  | :-------- | :----- | :----------       |
-| 1           | global-switch-button-pin  | write     | 1/0    | turn on/off       |
-| 71          | switch-button-pin (f1)    | write     | 1/0    | switch f1  on/off |
-| 72          | switch-button-pin (sub)   | write     | 1/0    | switch sub on/off |
-| 73          | switch-button-pin (s1l)   | write     | 1/0    | switch s1l on/off |
-| 74          | switch-button-pin (s1r)   | write     | 1/0    | switch s1r on/off |
-| 75          | switch-button-pin (t1)    | write     | 1/0    | switch t1  on/off |
+| Pin Number    | Pin Name                  | Operation | Values | Description       |
+| :------------ | :-----------------------  | :-------- | :----- | :----------       |
+| V-1           | global-switch-button-pin  | write     | 1/0    | turn on/off       |
+| V-71          | switch-button-pin (f1)    | write     | 1/0    | switch f1  on/off |
+| V-72          | switch-button-pin (sub)   | write     | 1/0    | switch sub on/off |
+| V-73          | switch-button-pin (s1l)   | write     | 1/0    | switch s1l on/off |
+| V-74          | switch-button-pin (s1r)   | write     | 1/0    | switch s1r on/off |
+| V-75          | switch-button-pin (t1)    | write     | 1/0    | switch t1  on/off |
 
 
 ### Virtual Pins - blynk-pi
 
-| Pin Number  | Pin Name                 | Operation | Values | Description |
-| :---------- | :----------------------- | :-------- | :----- | :---------- |
-| 3           | shutdown-virtual-pin     | write     | 0      | soft power switch: -> turn off |
+| Pin Number    | Pin Name                 | Operation | Values | Description |
+| :------------ | :----------------------- | :-------- | :----- | :---------- |
+| V-3           | shutdown-virtual-pin     | write     | 0      | soft power switch: -> turn off |
 
 Example:
 
 ### Virtual Pins - NodeMCU
-| Pin Number  | Pin Name                 | Operation | Values | Description |
-| :---------- | :----------------------- | :-------- | :----- | :---------- |
-| 3           | shutdown-virtual-pin     | write     | 1      | soft power switch: -> turn on |
+| Pin Number    | Pin Name                 | Operation | Values | Description |
+| :------------ | :----------------------- | :-------- | :----- | :---------- |
+| V-3           | shutdown-virtual-pin     | write     | 1      | soft power switch: -> turn on |
+| V-2           | bultin LED               | write     | 1/0    | bultin LED on/off             |
+
+### Physical Pins - NodeMCU
+| Pin Number    | Pin Name                 | Operation | Values   | Description |
+| :------------ | :----------------------- | :-------- | :------- | :---------- |
+| D-8           | relay-5V                 | write     | 1/0      | raspberry pi's power  |
+| D-1           | relay-14.85V             | write     | 1/0      | spealer's power       |
+| D-7           | raspberry-14.85V         | write     | 1/0      | (blue) connect from raspberry pi's GPIO25   |
+| D-6           | raspberry-5V             | write     | 1/0      | (yellow) connect from raspberry pi's GPIO24 |
 
 Example:
 
