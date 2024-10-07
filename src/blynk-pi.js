@@ -22,8 +22,7 @@ const main = (options) => {
     }
     console.log(`switchPin switch ${status}`);
     blynk.emit('end');
-    blynk.disconnect();
-    process.exit();
+    blynk.disconnect(false);
   });
 };
 
